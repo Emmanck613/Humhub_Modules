@@ -32,7 +32,7 @@ $ponenciaModel = new Ponencias();
                     <div style="width:100px; display: flex; flex-direction: column; justify-content:space-around; align-items:center; background-color: #fff; border: 0.2rem solid; padding:5px; border-radius: 10px;">
                         <i class="fa fa-book"></i>    
                         <p> <?= $model->getPonenciasTotal(); ?> </p>
-                        <h6>Producción</h6>
+                        <h6>Ponencia</h6>
                     </div>
                     <div style="width:100px; display: flex; flex-direction: column; justify-content:space-around; align-items:center; background-color: #fff; border: 0.2rem solid; padding:5px; border-radius: 10px;">
                         <i class="fa fa-book"></i>    

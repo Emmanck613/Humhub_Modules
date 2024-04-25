@@ -15,7 +15,7 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'Ponencia_id') ?>
+    <?php // $form->field($model, 'Ponencia_id') ?>
 
     <?= $form->field($model, 'User_id') ?>
 
@@ -25,7 +25,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'Autor') ?>
 
-    <?php // echo $form->field($model, 'Anio') ?>
+    <?= $form->field($model, 'Anio') ?>
 
     <?php // echo $form->field($model, 'País') ?>
 
