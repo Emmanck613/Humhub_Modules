@@ -134,13 +134,13 @@ class Ponencias extends \yii\db\ActiveRecord
             'Tipo' => 'Tipo',
             'Participación' => 'Participación',
             'Autor' => 'Nombre',
-            'Anio' => 'Anio',
+            'Anio' => 'Año',
             'País' => 'País',
             'Titulo_evento' => 'Titulo Evento',
             'Titulo_ponencia' => 'Titulo Ponencia',
             'Resumen' => 'Resumen',
             'Memoria' => 'Memoria',
-            'Publicación' => 'Publicación',
+            'Publicación' => 'Publicación'
         ];
     }
 }
