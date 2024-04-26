@@ -20,27 +20,29 @@ use yii\widgets\ActiveForm;
             <span class="col-md-6">
                 <?= $form->field($model, 'Anio')->textInput() ?>
 
-                <?= $form->field($model, 'Titulo_capitulo')->textInput(['maxlength' => true]) ?>
+                <?= $form->field($model, 'Titulo_capitulo')->textInput(['maxlength' => true],['onchange' => 'this.value = this.value.toUpperCase();']) ?>
 
-                <?= $form->field($model, 'Autor_libro')->textInput(['maxlength' => true]) ?>
+                <?= $form->field($model, 'Autor_libro')->textInput(['maxlength' => true], ['onchange' => 'this.value = this.value.toUpperCase();']) ?>
 
-                <?= $form->field($model, 'Autores_capitulo')->textInput(['maxlength' => true]) ?>
+                <?= $form->field($model, 'Autores_capitulo')->textInput(['maxlength' => true], ['onchange' => 'this.value = this.value.toUpperCase();']) ?>
 
-                <?= $form->field($model, 'Resumen')->textInput(['maxlength' => true, 'placeholder'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a felis et ligula fermentum ultrices sit amet non sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;']) ?>
+                <?= $form->field($model, 'Formato')->dropDownList($model->getFormato(), ['prompt' => 'Select Tipo'] ) ?>
+
+                <?= $form->field($model, 'Resumen')->textInput(['onchange' => 'this.value = this.value.toUpperCase();'], ['maxlength' => true, 'placeholder'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit.']) ?>
             </span>
 
             <span class="col-md-6">
                 <?= $form->field($model, 'Paginas')->textInput(['maxlength' => true]) ?>
 
-                <?= $form->field($model, 'Titulo_libro')->textInput(['maxlength' => true]) ?>
+                <?= $form->field($model, 'Titulo_libro')->textInput(['maxlength' => true], ['onchange' => 'this.value = this.value.toUpperCase();']) ?>
 
-                <?= $form->field($model, 'Editores')->textInput(['maxlength' => true]) ?>
+                <?= $form->field($model, 'Editores')->textInput(['maxlength' => true], ['onchange' => 'this.value = this.value.toUpperCase();']) ?>
 
                 <?= $form->field($model, 'ISBN')->textInput(['maxlength' => true]) ?>
 
                 <?= $form->field($model, 'URL')->textInput(['maxlength' => true]) ?>
 
-                <?= $form->field($model, 'Palabras_clave')->textInput(['maxlength' => true]) ?>
+                <?= $form->field($model, 'Palabras_clave')->textInput(['maxlength' => true], ['onchange' => 'this.value = this.value.toUpperCase();']) ?>
             </span>
         </div>
     </div>

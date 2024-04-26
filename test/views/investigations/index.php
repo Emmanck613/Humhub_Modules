@@ -15,11 +15,12 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="libros-index">
     <div class="container-fluid">
+        
+        <?= $this->render('@test/views/layouts/nav-header', []) ?>
+
         <h1 style="margin-top:10px; font-weight:bold; font-size:20px; width:auto; text-align:center;">
             <?= Html::encode($this->title) ?>
         </h1> 
-        
-        <?= $this->render('@test/views/layouts/nav-header', []) ?>
          
         <p>
             <?= Html::a('Registrar', ['create'], ['class' => 'btn btn-success']) ?>

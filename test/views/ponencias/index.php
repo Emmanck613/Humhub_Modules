@@ -15,12 +15,12 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="container-fluid">
 
+    <?= $this->render('@test/views/layouts/nav-header', []) ?>
+
     <h1 style="margin-top:10px; font-weight:bold; font-size:20px; width:auto; text-align:center;">
         <?= Html::encode($this->title) ?>
     </h1>
-
-    <?= $this->render('@test/views/layouts/nav-header', []) ?>
-
+    
     <p>
         <?= Html::a('Create Ponencias', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
@@ -33,13 +33,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
            // 'Ponencia_id',
-            'User_id',
+           // 'User_id',
             'Tipo',
             'Participación',
             'Autor',
             'Anio',
             //'País',
-            //'Titulo_evento',
+            'Titulo_evento',
             //'Titulo_ponencia',
             //'Resumen',
             //'Memoria',

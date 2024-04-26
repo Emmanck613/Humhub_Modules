@@ -37,12 +37,12 @@ class Libros extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['User_id', 'Autor', 'Anio', 'Titulo', 'Resumen', 'Editorial', 'ISBN', 'Formato', 'DOI', 'URL', 'Palabras_clave'], 'required',],
+            [['User_id', 'Autor', 'Anio', 'Titulo', 'Resumen', 'Editorial', 'ISBN', 'Formato', 'Palabras_clave'], 'required',],
             [['User_id'], 'integer'],
             [['Anio'], 'integer', 'message'=>'Ingresa un numero valido'],
             [['Autor', 'Autores_sec', 'Titulo', 'Resumen', 'Editorial', 'URL', 'Palabras_clave'], 'string', 'max' => 255],
             [['ISBN'], 'string', 'max' => 20],
-            [['Formato', 'DOI'], 'string', 'max' => 50],
+            [['Formato'], 'string', 'max' => 50],
         ];
     }
 
@@ -58,6 +58,15 @@ class Libros extends \yii\db\ActiveRecord
         return $this->User_id;
     }
 
+    public static function getFormato()
+    {
+        return [
+              'Digital' => 'Digital',
+              'Impreso' => 'Impreso',
+              // Add more options as needed
+        ];
+    }
+    
     /**
      * {@inheritdoc}
      */
@@ -74,7 +83,6 @@ class Libros extends \yii\db\ActiveRecord
             'Editorial' => 'EDITORIAL',
             'ISBN' => 'ISBN',
             'Formato' => 'FORMATO',
-            'DOI' => 'DOI',
             'URL' => 'URL',
             'Palabras_clave' => 'PALABRAS CLAVE',
         ];

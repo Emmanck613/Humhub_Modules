@@ -17,23 +17,23 @@ use yii\widgets\ActiveForm;
         <div class="row">
 
         <span class="col-md-6 col-sm-6">
-            <?= $form->field($model, 'Autor')->textInput(['maxlength' => true, 'placeholder'=>'Person Name']) ?>
+            <?= $form->field($model, 'Autor')->textInput(['onchange' => 'this.value = this.value.toUpperCase();'],['maxlength' => true, 'placeholder'=>'Person Name']) ?>
 
-            <?= $form->field($model, 'Autores')->textInput(['maxlength' => true, 'placeholder'=>'John Doe, Jane Doe']) ?>
+            <?= $form->field($model, 'Autores')->textInput(['onchange' => 'this.value = this.value.toUpperCase();'],['maxlength' => true, 'placeholder'=>'John Doe, Jane Doe']) ?>
 
             <?= $form->field($model, 'Anio')->textInput(['placeholder'=>2020]) ?>
 
-            <?= $form->field($model, 'Titulo')->textInput(['maxlength' => true, 'placeholder'=>'Sample Book']) ?>
+            <?= $form->field($model, 'Titulo')->textInput(['onchange' => 'this.value = this.value.toUpperCase();'],['maxlength' => true, 'placeholder'=>'Sample Book']) ?>
 
-            <?= $form->field($model, 'Resumen')->textarea(['maxlength' => true, 'placeholder'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a felis et ligula fermentum ultrices sit amet non sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;']) ?>
+            <?= $form->field($model, 'Resumen')->textarea(['onchange' => 'this.value = this.value.toUpperCase();'],['maxlength' => true, 'placeholder'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a felis et ligula fermentum ultrices sit amet non sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;']) ?>
 
-            <?= $form->field($model, 'Revista')->textInput(['maxlength' => true, 'placeholder'=>'Sample Magazine']) ?>
+            <?= $form->field($model, 'Revista')->textInput(['onchange' => 'this.value = this.value.toUpperCase();'],['maxlength' => true, 'placeholder'=>'Sample Magazine']) ?>
         </span>
 
         <span class="col-md-6 col-sm-6">
-            <?= $form->field($model, 'Pais')->textInput(['maxlength' => true, 'placeholder'=>'Mexico']) ?>
+            <?= $form->field($model, 'Pais')->textInput(['onchange' => 'this.value = this.value.toUpperCase();'],['maxlength' => true, 'placeholder'=>'Mexico']) ?>
 
-            <?= $form->field($model, 'Idioma')->textInput(['maxlength' => true, 'placeholder'=>'Español']) ?>
+            <?= $form->field($model, 'Idioma')->textInput(['onchange' => 'this.value = this.value.toUpperCase();'],['maxlength' => true, 'placeholder'=>'Español']) ?>
 
             <?= $form->field($model, 'ISSNs')->textInput(['maxlength' => true, 'placeholder'=>'0-7645-2641-3']) ?>
 
@@ -41,7 +41,7 @@ use yii\widgets\ActiveForm;
 
             <?= $form->field($model, 'DOI')->textInput(['maxlength' => true, 'placeholder'=>'54321']) ?>
 
-            <?= $form->field($model, 'Palabras_clave')->textInput(['maxlength' => true, 'placeholder'=>'Articulo, Economia, Ambiente']) ?>
+            <?= $form->field($model, 'Palabras_clave')->textInput(['onchange' => 'this.value = this.value.toUpperCase();'],['maxlength' => true, 'placeholder'=>'Articulo, Economia, Ambiente']) ?>
         </span>
      </div>
     </div>

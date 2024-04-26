@@ -37,9 +37,9 @@ class CapLibros extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['User_id', 'Anio', 'Titulo_capitulo', 'Autor_libro', 'Autores_capitulo', 'Resumen', 'Paginas', 'Titulo_libro', 'Editores', 'ISBN', 'URL', 'Palabras_clave'], 'required'],
+            [['User_id', 'Anio', 'Titulo_capitulo', 'Autor_libro', 'Autores_capitulo', 'Resumen', 'Paginas', 'Titulo_libro', 'Editores', 'ISBN', 'Palabras_clave', 'Formato'], 'required'],
             [['User_id', 'Anio'], 'integer'],
-            [['Titulo_capitulo', 'Autor_libro', 'Autores_capitulo', 'Resumen', 'Titulo_libro', 'Editores', 'URL', 'Palabras_clave'], 'string', 'max' => 255],
+            [['Titulo_capitulo', 'Autor_libro', 'Autores_capitulo', 'Resumen', 'Titulo_libro', 'Editores', 'URL', 'Palabras_clave', 'Formato'], 'string', 'max' => 255],
             [['Paginas', 'ISBN'], 'string', 'max' => 50],
         ];
     }
@@ -55,6 +55,17 @@ class CapLibros extends \yii\db\ActiveRecord
        {
            return $this->User_id;
        }
+
+    // Define un metodo para retornar las opciones para Tipo
+    public static function getFormato()
+    {
+        return [
+              'Digital' => 'Digital',
+              'Impreso' => 'Impreso',
+              // Add more options as needed
+        ];
+    }
+
 
     /**
      * {@inheritdoc}
@@ -74,7 +85,8 @@ class CapLibros extends \yii\db\ActiveRecord
             'Editores' => 'EDITOR(ES)',
             'ISBN' => 'ISBN',
             'URL' => 'URL',
-            'Palabras_clave' => 'PALABRAS CLAVE'
+            'Palabras_clave' => 'PALABRAS CLAVE',
+            'Formato' => 'FORMATO'
         ];
     }
 }

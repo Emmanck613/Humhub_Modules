@@ -55,14 +55,14 @@ class Tesis extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'Tesis_id' => 'Tesis ID',
-            'User_id' => 'User ID',
-            'Autor' => 'Autor',
-            'Grado_academico' => 'Grado Academico',
-            'Institucion_procedencia' => 'Institucion Procedencia',
-            'Anio' => 'Anio',
-            'Titulo' => 'Titulo',
-            'Pais' => 'Pais',
+            'Tesis_id' => 'TESIS ID',
+            'User_id' => 'USER ID',
+            'Autor' => 'AUTOR',
+            'Grado_academico' => 'GRADO ACADEMICO',
+            'Institucion_procedencia' => 'INSTITUCIÓN PROCEDENCIA',
+            'Anio' => 'AÑO',
+            'Titulo' => 'TITULO',
+            'Pais' => 'PAIS',
         ];
     }
 }

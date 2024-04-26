@@ -17,19 +17,19 @@ use yii\widgets\ActiveForm;
 
         <div class="row">
             <span class="col-md-6 col-sm-6">
-                <?= $form->field($model, 'Autor')->textInput(['maxlength' => true]) ?>
+                <?= $form->field($model, 'Autor')->textInput(['onchange' => 'this.value = this.value.toUpperCase();'],['maxlength' => true]) ?>
 
                 <?= $form->field($model, 'Grado_academico')->dropDownList($model->getOptions(), ['prompt' => 'Select Tipo'] ) ?>
 
-                <?= $form->field($model, 'Institucion_procedencia')->textInput(['maxlength' => true]) ?>
+                <?= $form->field($model, 'Institucion_procedencia')->textInput(['onchange' => 'this.value = this.value.toUpperCase();'],['maxlength' => true]) ?>
             </span>
 
             <span class="col-md-6 col-sm-6">
                 <?= $form->field($model, 'Anio')->textInput() ?>
 
-                <?= $form->field($model, 'Titulo')->textInput(['maxlength' => true]) ?>
+                <?= $form->field($model, 'Titulo')->textInput(['onchange' => 'this.value = this.value.toUpperCase();'],['maxlength' => true]) ?>
 
-                <?= $form->field($model, 'Pais')->textInput(['maxlength' => true]) ?>
+                <?= $form->field($model, 'Pais')->textInput(['onchange' => 'this.value = this.value.toUpperCase();'],['maxlength' => true]) ?>
             </span>
         </div>
     

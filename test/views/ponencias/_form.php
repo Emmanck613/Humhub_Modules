@@ -22,23 +22,23 @@ use yii\widgets\ActiveForm;
 
                 <?= $form->field($model, 'Participación')->dropDownList($model->getParticipacionOptions(), ['prompt' => 'Select Tipo'] )?>
 
-                <?= $form->field($model, 'Autor')->textInput(['maxlength' => true, 'value'=>$name]) ?>
+                <?= $form->field($model, 'Autor')->textInput(['onchange' => 'this.value = this.value.toUpperCase();'],['maxlength' => true, 'value'=>$name]) ?>
 
                 <?= $form->field($model, 'Anio')->textInput() ?>
 
-                <?= $form->field($model, 'País')->textInput(['maxlength' => true]) ?>
+                <?= $form->field($model, 'País')->textInput(['onchange' => 'this.value = this.value.toUpperCase();'],['maxlength' => true]) ?>
             </span>
 
             <span class="col-md-6">
-                <?= $form->field($model, 'Titulo_evento')->textInput(['maxlength' => true]) ?>
+                <?= $form->field($model, 'Titulo_evento')->textInput(['onchange' => 'this.value = this.value.toUpperCase();'],['maxlength' => true]) ?>
 
-                <?= $form->field($model, 'Titulo_ponencia')->textInput(['maxlength' => true]) ?>
+                <?= $form->field($model, 'Titulo_ponencia')->textInput(['onchange' => 'this.value = this.value.toUpperCase();'],['maxlength' => true]) ?>
 
-                <?= $form->field($model, 'Resumen')->textInput(['maxlength' => true]) ?>
+                <?= $form->field($model, 'Resumen')->textInput(['onchange' => 'this.value = this.value.toUpperCase();'],['maxlength' => true]) ?>
 
                 <?= $form->field($model, 'Memoria')->dropDownList($model->getMemoriaOptions(), ['prompt' => 'Select Tipo'] ) ?>
 
-                <?= $form->field($model, 'Publicación')->textInput(['maxlength' => true]) ?>
+                <?= $form->field($model, 'Publicación')->textInput(['onchange' => 'this.value = this.value.toUpperCase();'],['maxlength' => true]) ?>
             </span>
         </row>
     </div>

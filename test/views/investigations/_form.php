@@ -19,29 +19,28 @@ use yii\widgets\ActiveForm;
         
         <div class="row">
             <span class="col-md-6">
-                <?= $form->field($model, 'Autor')->textInput(['maxlength' => true, 'placeholder'=>'John Doe']) ?>
+                <?= $form->field($model, 'Autor')->textInput(['onchange' => 'this.value = this.value.toUpperCase();'],['maxlength' => true, 'placeholder'=>'John Doe']) ?>
 
-                <?= $form->field($model, 'Autores_sec')->textInput(['maxlength' => true, 'placeholder'=>'Jane Smith Garza']) ?>
+                <?= $form->field($model, 'Autores_sec')->textInput(['onchange' => 'this.value = this.value.toUpperCase();'],['maxlength' => true, 'placeholder'=>'Jane Smith Garza']) ?>
 
                 <?= $form->field($model, 'Anio')->textInput(['placeholder'=>2020]) ?>
 
-                <?= $form->field($model, 'Titulo')->textInput(['maxlength' => true, 'placeholder'=>'Sample Book']) ?>
+                <?= $form->field($model, 'Titulo')->textInput(['onchange' => 'this.value = this.value.toUpperCase();'],['maxlength' => true, 'placeholder'=>'Sample Book']) ?>
 
-                <?= $form->field($model, 'Resumen')->textInput(['maxlength' => true, 'placeholder'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a felis et ligula fermentum ultrices sit amet non sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;']) ?>
+                <?= $form->field($model, 'Resumen')->textInput(['onchange' => 'this.value = this.value.toUpperCase();'],['maxlength' => true, 'placeholder'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a felis et ligula fermentum ultrices sit amet non sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;']) ?>
 
-                <?= $form->field($model, 'Editorial')->textInput(['maxlength' => true, 'placeholder'=>'Sample Publisher']) ?>
             </span>
 
             <span class="col-md-6">
                 <?= $form->field($model, 'ISBN')->textInput(['maxlength' => true, 'placeholder'=>'0-7645-2641-3']) ?>
 
-                <?= $form->field($model, 'Formato')->textInput(['maxlength' => true, 'placeholder'=>'Electronico o Impreso']) ?>
+                <?= $form->field($model, 'Formato')->dropDownList($model->getFormato(), ['prompt' => 'Select Tipo'] ) ?>
 
-                <?= $form->field($model, 'DOI')->textInput(['maxlength' => true, 'placeholder'=>'54321']) ?>
+                <?= $form->field($model, 'Editorial')->textInput(['onchange' => 'this.value = this.value.toUpperCase();'],['maxlength' => true, 'placeholder'=>'Sample Publisher']) ?>
 
                 <?= $form->field($model, 'URL')->textInput(['maxlength' => true, 'placeholder'=>'http://sampleurl.com/article']) ?>
 
-                <?= $form->field($model, 'Palabras_clave')->textInput(['maxlength' => true, 'placeholder'=>'Research, science']) ?>
+                <?= $form->field($model, 'Palabras_clave')->textInput(['onchange' => 'this.value = this.value.toUpperCase();'],['maxlength' => true, 'placeholder'=>'Research, science']) ?>
             </span>
         </div>
     </div>

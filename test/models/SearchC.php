@@ -17,7 +17,7 @@ class SearchC extends CapLibros
     {
         return [
             [['Cap_id', 'User_id', 'Anio'], 'integer'],
-            [['Titulo_capitulo', 'Resumen', 'Paginas', 'Titulo_libro', 'Editores', 'ISBN', 'URL', 'Autor_libro','Autores_capitulo'], 'safe'],
+            [['Titulo_capitulo', 'Resumen', 'Paginas', 'Titulo_libro', 'Editores', 'ISBN', 'URL', 'Autor_libro','Autores_capitulo', 'Formato'], 'safe'],
         ];
     }
 
@@ -64,11 +64,14 @@ class SearchC extends CapLibros
 
         $query->andFilterWhere(['like', 'Titulo_capitulo', $this->Titulo_capitulo])
             ->andFilterWhere(['like', 'Resumen', $this->Resumen])
+            ->andFilterWhere(['like', 'Autor_libro ', $this->Autor_libro])
+            ->andFilterWhere(['like', 'Autores_capitulo ', $this->Autores_capitulo])
             ->andFilterWhere(['like', 'Paginas', $this->Paginas])
             ->andFilterWhere(['like', 'Titulo_libro', $this->Titulo_libro])
             ->andFilterWhere(['like', 'Editores', $this->Editores])
             ->andFilterWhere(['like', 'ISBN', $this->ISBN])
-            ->andFilterWhere(['like', 'URL', $this->URL]);
+            ->andFilterWhere(['like', 'URL', $this->URL])
+            ->andFilterWhere(['like', 'Formato', $this->URL]);
 
         return $dataProvider;
     }
@@ -106,7 +109,8 @@ class SearchC extends CapLibros
             ->andFilterWhere(['like', 'Titulo_libro', $this->Titulo_libro])
             ->andFilterWhere(['like', 'Editores', $this->Editores])
             ->andFilterWhere(['like', 'ISBN', $this->ISBN])
-            ->andFilterWhere(['like', 'URL', $this->URL]);
+            ->andFilterWhere(['like', 'URL', $this->URL])
+            ->andFilterWhere(['like', 'Formato', $this->URL]);
 
         return $dataProvider;
     }

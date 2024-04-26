@@ -17,7 +17,7 @@ class SearchSP extends Libros
     {
         return [
             [['Libro_id', 'User_id', 'Anio'], 'integer'],
-            [['Autor', 'Autores_sec', 'Titulo', 'Resumen', 'Editorial', 'ISBN', 'Formato', 'DOI', 'URL', 'Palabras_clave'], 'safe'],
+            [['Autor', 'Autores_sec', 'Titulo', 'Resumen', 'Editorial', 'ISBN', 'Formato', 'URL', 'Palabras_clave'], 'safe'],
         ];
     }
 
@@ -69,7 +69,6 @@ class SearchSP extends Libros
             ->andFilterWhere(['like', 'Editorial', $this->Editorial])
             ->andFilterWhere(['like', 'ISBN', $this->ISBN])
             ->andFilterWhere(['like', 'Formato', $this->Formato])
-            ->andFilterWhere(['like', 'DOI', $this->DOI])
             ->andFilterWhere(['like', 'URL', $this->URL])
             ->andFilterWhere(['like', 'Palabras_clave', $this->Palabras_clave]);
 
@@ -108,7 +107,6 @@ class SearchSP extends Libros
             ->andFilterWhere(['like', 'Editorial', $this->Editorial])
             ->andFilterWhere(['like', 'ISBN', $this->ISBN])
             ->andFilterWhere(['like', 'Formato', $this->Formato])
-            ->andFilterWhere(['like', 'DOI', $this->DOI])
             ->andFilterWhere(['like', 'URL', $this->URL])
             ->andFilterWhere(['like', 'Palabras_clave', $this->Palabras_clave]);
 

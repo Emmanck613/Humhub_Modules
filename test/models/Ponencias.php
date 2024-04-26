@@ -36,7 +36,7 @@ class Ponencias extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['User_id', 'Tipo', 'Participación', 'Autor', 'Anio', 'País', 'Titulo_evento', 'Titulo_ponencia', 'Resumen', 'Memoria', 'Publicación'], 'required'],
+            [['User_id', 'Tipo', 'Participación', 'Autor', 'Anio', 'País', 'Titulo_evento', 'Titulo_ponencia', 'Resumen', 'Memoria'], 'required'],
             [['User_id', 'Anio'], 'integer'],
             [['Tipo', 'Participación', 'Autor', 'País', 'Titulo_evento', 'Titulo_ponencia', 'Resumen', 'Memoria', 'Publicación'], 'string', 'max' => 255],
         ];
